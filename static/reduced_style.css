@@ -1,0 +1,24 @@
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+
+body,
+textarea,
+.btn {
+  font-family: 'Droid Arabic Naskh' !important;
+  text-align: justify;
+}
+
+.content, .textcontent{
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.textcontent {
+  background-color: #EEEEEE ;
+  border: 0;
+  font-family: 'Droid Arabic Naskh';
+  width: 100%;
+  height: 100%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
+}
