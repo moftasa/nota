@@ -1,0 +1,7 @@
+RedirectMatch permanent ^/$ http://test-nota.nfshost.com/nota.py
+
+# Turn On mod_rewrite
+RewriteEngine On
+
+RewriteRule ^(.{5})$ /nota.py?note=$1 [L]
+RewriteRule ^(.{32})$ /nota.py?note=$1 [L]
