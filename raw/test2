@@ -1,0 +1,8 @@
+The optional argument <em>display</em> defaults to <tt class="docutils literal"><span class="pre">1</span></tt> and can be set to <tt class="docutils literal"><span class="pre">0</span></tt> to
+suppress sending the traceback to the browser. If the argument <em>logdir</em> is
+present, the traceback reports are written to files.  The value of <em>logdir</em>
+should be a directory where these files will be placed. The optional argument
+<em>context</em> is the number of lines of context to display around the current line
+of source code in the traceback; this defaults to <tt class="docutils literal"><span class="pre">5</span></tt>. If the optional
+argument <em>format</em> is <tt class="docutils literal"><span class="pre">"html"</span></tt>, the output is formatted as HTML.  Any other
+value forces plain text output.  The default value is <tt class="docutils literal"><span class="pre">"html"</span></tt>.
