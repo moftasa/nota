@@ -28,8 +28,22 @@ def head(title, url=None):
 <head>
 <title> نوتة | %s </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewprot" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="stylesheet" type="text/css" href="static/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+<style>
+	body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+	}
+.content {
+    margin: 0 auto;
+    max-width: 768px;
+</style>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css" />
+<link rel="stylesheet" type="text/css" href="static/reduced_style.css" />
+
 
 <script language="JavaScript" type="text/javascript">
 function clearTextArea() {
@@ -56,50 +70,79 @@ def body(text, url, base_url):
     site_url = base_url + "/nota.py"
     print """
 <body>
-<div id="container">
-<div id="header">
-<h1 class="header"><a href="%s" title="أبسط طريقة لمشاركة النصوص العربية" class="header">نوتة</a></h1>
-</div>""" % site_url
+
+<div class="navbar navbar-fixed-top navbar-inverse">
+	<div class="navbar-inner">
+
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+			</button>
+
+			<a href="#" class="brand">نوتة</a>
+
+			<div class="nav-collapse collapse">
+			<ul class="nav">
+				<li><a href="%s">الرئيسية</a></li>
+				<li><a href="#input">أنشئ نوتة جديدة</a></li>
+				<li><a href="#share">أنشر</a></li>
+			</ul>
+
+		</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+""" % site_url
+
+# The following is about the cool image not yet compatible with bootstrap CSS
+
     if img_url != None:
 	 print """<div id="header-img">
 <img class="header-img" src="%s"></img>
-</div><div id="content-with-image"><div id="text-margin">""" % img_url
+</div><div id="content-with-image">""" % img_url
     else:
-	print '<div id="content"><div id="text-margin">' 
+	print '<div id="content">' 
     print "<p>%s</p>" % text.replace('\n', '<br />') # convert line breaks
     
 def sharing(text, url, base_url, filename):
-    print "<div id='sharing'>"
+    print "<div class='well'>"
     if filename:
-        print "<h3><a href='%s' class='social-link'>تنزيل النص</a></h3>" % (base_url + "/raw/" + filename)
+        print "<a href='%s' class='btn'>تنزيل النص</a>" % (base_url + "/raw/" + filename)
     else:
         pass
-    print "<h3>أنشر:</h3>"    
+    print "<h3><a name='share'>أنشر:</a></h3>"    
+    print """<div class="btn-group">
+	<a class="btn" href="https://twitter.com/home/?status=%s+%s">غرّد على تويتر <img src="static/twitter.png" alt="غرد" width="20px" /></a>""" % (urlsafe_encode(text[0:93]),  urlsafe_encode(url)) 
     print """
-<a href="https://twitter.com/home/?status=%s+%s" title="غرّد" class="social-link"><img src="static/twitter.png" alt="غرد" /></a>
-""" % (urlsafe_encode(text[0:93]),  urlsafe_encode(url)) 
-    print """
-<a title="شارك على فيسبوك" href="http://www.facebook.com/sharer.php?u=%s&t=%s" target="_blank" class="social-link">
-<img src="static/facebook.png" alt="شارك على فيسبوك" />
+	<a class="btn" href="http://www.facebook.com/sharer.php?u=%s&t=%s">شارك على فيسبوك <img src="static/facebook.png" alt="شارك على فيسبوك" width="18px"/></a><img src="static/facebook.png" alt="شارك على فيسبوك" />
 </a>
+</div>
 """ % (url, text[0:200])
-    print "<h3>عنوان الصفحة:</h3><pre>" + url + "</pre>"
+    print "<h4>عنوان الصفحة:</h3><pre class='text-right'>" + url + "</pre>"
     print "</div>"
     
 def form(default_text,base_url):
     url = base_url + "/nota.py"
     print "<h2><a name='input' id='create'>أنشئ نوتة جديدة</a></h2>"
     print '<form name="textform" action="%s" method="post">' % url
-    print '<textarea id="textcontent" name="textcontent" class="form-textarea" cols="40" rows="10">'
+    print '<textarea name="textcontent" class="textcontent" id="textcontent" cols="40" rows="10">'
     print default_text.rstrip()
     print '</textarea><br />'
-    print '<input id="edit-submit" type="submit" value="أحفظ" />'
-    print '''<input type='button' id='edit-clear' value='أمسح رقعة الكتابة' onclick="clearTextArea()">'''
-    print '</form>'
+    print """<div  class="form-actions">
+                <input class="btn btn-primary btn-large" type="submit" value="أحفظ" />
+                <input type='button' class='btn btn-large' value='أمسح رقعة الكتابة' onclick="clearTextArea()">
+        </form>"""
 
 def tail():
-    print '&nbsp;'
-    print '</div>'
-    print '</div>'
-    print '</div>'
-    print "</body>"
+    print """&nbsp;
+    </div>
+    </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    </body>
+    </html>"""
