@@ -118,8 +118,7 @@ def sharing(text, url, base_url, filename):
     print """<div class="btn-group">
 	<a class="btn" href="https://twitter.com/home/?status=%s+%s">غرّد على تويتر <img src="static/twitter.png" alt="غرد" width="20px" /></a>""" % (urlsafe_encode(text[0:93]),  urlsafe_encode(url)) 
     print """
-	<a class="btn" href="http://www.facebook.com/sharer.php?u=%s&t=%s">شارك على فيسبوك <img src="static/facebook.png" alt="شارك على فيسبوك" width="18px"/></a><img src="static/facebook.png" alt="شارك على فيسبوك" />
-</a>
+	<a class="btn" href="http://www.facebook.com/sharer.php?u=%s&t=%s">شارك على فيسبوك <img src="static/facebook.png" alt="شارك على فيسبوك" width="18px"/></a>
 </div>
 """ % (url, text[0:200])
     print "<h4>عنوان الصفحة:</h3><pre class='text-right'>" + url + "</pre>"
