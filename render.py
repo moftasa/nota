@@ -105,7 +105,7 @@ def body(text, url, base_url):
 <img class="header-img" src="%s"></img>
 </div><div id="content-with-image">""" % img_url
     else:
-	print '<div id="content">' 
+	print '<div class="content">' 
     print "<p>%s</p>" % text.replace('\n', '<br />') # convert line breaks
     
 def sharing(text, url, base_url, filename):
