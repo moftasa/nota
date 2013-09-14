@@ -103,7 +103,7 @@ def body(text, url, base_url):
 
 			<ul class="nav">
 				<li><a href="%s" accesskey="1">الرئيسية</a></li>
-				<li><a href="#input" accesskey="n">أنشئ نوتة جديدة</a></li>
+				<li><a href="#input">أنشئ نوتة جديدة</a></li>
 				<li><a href="#share" accesskey="p">أنشر</a></li>
 				<li><a href="#">تغير الخط</a>
 				<ul>
@@ -149,7 +149,7 @@ def form(default_text,base_url):
     url = base_url + "/nota.py"
     print "<h2><a name='input' id='create'>أنشئ نوتة جديدة</a></h2>"
     print '<form name="textform" action="%s" method="post">' % url
-    print '<textarea id="textcontent" name="textcontent" class="form-textarea" cols="40" rows="10">'
+    print '<textarea id="textcontent" name="textcontent" class="form-textarea" cols="40" rows="10" accesskey="n">'
     print default_text.rstrip()
     print '</textarea><br />'
     print '<input id="edit-submit" type="submit" value="أحفظ" accesskey="s" />'
