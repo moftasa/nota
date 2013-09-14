@@ -150,7 +150,7 @@ padding-top: 40px;
   padding: 10px
 }
 
-#content-with-image{
+.with-image{
   width:100%;
   position: absolute;
   margin-top:33%;
