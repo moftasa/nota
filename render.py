@@ -133,7 +133,7 @@ def sharing(text, url, base_url, filename):
         print "<h3><a href='%s' class='social-link'>تنزيل النص</a></h3>" % (base_url + "/raw/" + filename)
     else:
         pass
-    print "<h3><a name='share'>أنشر</a></h3>"    
+    print "<h3><a name='share' accesskey='s'>أنشر</a></h3>"    
     print """
 <a href="https://twitter.com/home/?status=%s+%s" title="غرّد" class="social-link"><img src="static/twitter.png" alt="غرد" /></a>
 """ % (urlsafe_encode(text[0:93]),  urlsafe_encode(url)) 
@@ -149,7 +149,7 @@ def form(default_text,base_url):
     url = base_url + "/nota.py"
     print "<h2><a name='input' id='create'>أنشئ نوتة جديدة</a></h2>"
     print '<form name="textform" action="%s" method="post">' % url
-    print '<textarea id="textcontent" name="textcontent" class="form-textarea" cols="40" rows="10">'
+    print '<textarea id="textcontent" name="textcontent" class="form-textarea" cols="40" rows="10" accesskey="n">'
     print default_text.rstrip()
     print '</textarea><br />'
     print '<input id="edit-submit" type="submit" value="أحفظ" />'
