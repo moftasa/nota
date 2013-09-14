@@ -64,7 +64,7 @@ def body(text, url, base_url):
 				<a href="#" class="brand" title="العودة لأعلى الصفحة">نوتة</a>
 
 				<ul class="nav">
-					<li><a href="http://test-nota.nfshost.com/nota.py">الرئيسية</a></li>
+					<li><a href="%s">الرئيسية</a></li>
 					<li><a href="#input">أنشئ نوتة جديدة</a></li>
 					<li><a href="#share">أنشر</a></li>
 				</ul>
