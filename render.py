@@ -113,5 +113,4 @@ def tail():
     print '&nbsp;'
     print '</div>'
     print '</div>'
-    print '</div>'
     print "</body>"
