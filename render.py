@@ -111,7 +111,7 @@ def body(text, url, base_url):
 def sharing(text, url, base_url, filename):
     print "<div class='well'>"
     if filename:
-        print "<a href='%s' class='btn'>تنزيل النص</a>" % (base_url + "/raw/" + filename)
+        print "<a href='%s' class='btn'>تنزيل النص <i class='icon-arrow-down'></i></a>" % (base_url + "/raw/" + filename)
     else:
         pass
     print "<h3><a name='share'>أنشر:</a></h3>"    
