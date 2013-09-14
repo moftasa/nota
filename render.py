@@ -71,8 +71,6 @@ def body(text, url, base_url):
 
 			</div>
 		</div>
-	</div>
-
 	</div>""" % site_url
     if img_url != None:
 	 print """<div id="header-img">
