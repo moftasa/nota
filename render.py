@@ -86,7 +86,7 @@ def sharing(text, url, base_url, filename):
         print "<h3><a href='%s' class='social-link'>تنزيل النص</a></h3>" % (base_url + "/raw/" + filename)
     else:
         pass
-    print "<h3>أنشر:</h3>"    
+    print "<h3><a name='share'>أنشر</a></h3>"    
     print """
 <a href="https://twitter.com/home/?status=%s+%s" title="غرّد" class="social-link"><img src="static/twitter.png" alt="غرد" /></a>
 """ % (urlsafe_encode(text[0:93]),  urlsafe_encode(url)) 
@@ -95,7 +95,7 @@ def sharing(text, url, base_url, filename):
 <img src="static/facebook.png" alt="شارك على فيسبوك" />
 </a>
 """ % (url, text[0:200])
-    print "<h3>عنوان الصفحة:</h3><pre>" + url + "</pre>"
+    print "<h3>عنوان الصفحة</h3><pre>" + url + "</pre>"
     print "</div>"
     
 def form(default_text,base_url):
