@@ -56,16 +56,31 @@ def body(text, url, base_url):
     site_url = base_url + "/nota.py"
     print """
 <body>
-<div id="container">
-<div id="header">
-<h1 class="header"><a href="%s" title="أبسط طريقة لمشاركة النصوص العربية" class="header">نوتة</a></h1>
+
+<div class="navbar">
+	<div class="navbar-inner">
+
+		<div class="container">
+
+			<a href="#" class="brand" title="العودة لأعلى الصفحة">نوتة</a>
+
+			<ul class="nav">
+				<li><a href="http://test-nota.nfshost.com/nota.py">الرئيسية</a></li>
+				<li><a href="#input">أنشئ نوتة جديدة</a></li>
+				<li><a href="#share">أنشر</a></li>
+			</ul>
+
+		</div>
+	</div>
+</div>
+
 </div>""" % site_url
     if img_url != None:
 	 print """<div id="header-img">
-<img class="header-img" src="%s"></img>
-</div><div id="content-with-image"><div id="text-margin">""" % img_url
+<img class="header-img" src="%s">
+</div><div class="main with-image"><div id="text-margin">""" % img_url
     else:
-	print '<div id="content"><div id="text-margin">' 
+	print '<div class="main"><div id="text-margin">' 
     print "<p>%s</p>" % text.replace('\n', '<br />') # convert line breaks
     
 def sharing(text, url, base_url, filename):

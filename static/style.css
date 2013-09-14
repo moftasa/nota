@@ -17,6 +17,56 @@ body {
 }
 
 
+/** Navbar **/
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+color: #424242;
+height: 60px;
+background: #424242;
+/* Adds shadow to the bottom of the bar */
+-webkit-box-shadow: 0px 0px 8px 0px #000000;
+-moz-box-shadow: 0px 0px 8px 0px #000000;
+box-shadow: 0px 0px 8px 0px #000000;
+z-index:4;
+}
+
+.navbar-inner {
+max-width: 1024px;
+margin: auto;
+}
+
+.nav a {
+font-size: 14px;
+padding-top: 0px;
+padding-left: 15px;
+padding-right: 15px;
+text-decoration: none;
+color: white;
+}
+
+.navbar ul {
+list-style: none;
+}
+
+.brand{
+font-size: 30px;
+font-weight:  bold;
+float: right;
+margin: 0px 40px 40px 40px ;
+color: white;
+text-decoration:  none;
+}
+
+.navbar ul li a {
+float: right;
+margin: 0 14px;
+}
+
+
+
+
 /**
 * Header
 */
@@ -90,10 +140,14 @@ a.input:hover{
  * Main content
  */
 
+.main {
+padding-top: 40px;
+}
+
 #text-margin{
-  margin-left:25%;
-  margin-right:25%;
-  width: 50%;
+  margin: auto;
+  max-width: 768px;
+  padding: 10px
 }
 
 #content-with-image{
@@ -137,7 +191,7 @@ a.social-link {
 * Form
 */
 
-#content .form-textarea {
+.form-textarea {
   background-color: #EEEEEE;
   border: 0;
   font-family: 'Droid Arabic Naskh';
@@ -151,7 +205,7 @@ a.social-link {
   border-radius: 5px 5px 5px 5px;
 }
 
-#content #edit-submit {
+#edit-submit {
   background-color: #B2FC3A;
   border: 0;
   color: #242021;  
@@ -169,11 +223,11 @@ a.social-link {
   border-radius: 5px 5px 5px 5px;
 }
 
-#content #edit-submit:hover {
+#edit-submit:hover {
   background-color: #FFCA1B;
 }
 
-#content #edit-clear {
+#edit-clear {
   background-color: #CCCCCC;
   border: 0;
   color: #242021;  
@@ -191,7 +245,7 @@ a.social-link {
   border-radius: 5px 5px 5px 5px;
 }
 
-#content #edit-clear:hover {
+#edit-clear:hover {
   background-color: #787878;
 }
 
