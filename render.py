@@ -55,26 +55,25 @@ def body(text, url, base_url):
     text = linkify.auto_link(text) # make urls linkable
     site_url = base_url + "/nota.py"
     print """
-<body>
+	<body>
+	<div class="navbar">
+		<div class="navbar-inner">
 
-<div class="navbar">
-	<div class="navbar-inner">
+			<div class="container">
 
-		<div class="container">
+				<a href="#" class="brand" title="العودة لأعلى الصفحة">نوتة</a>
 
-			<a href="#" class="brand" title="العودة لأعلى الصفحة">نوتة</a>
+				<ul class="nav">
+					<li><a href="http://test-nota.nfshost.com/nota.py">الرئيسية</a></li>
+					<li><a href="#input">أنشئ نوتة جديدة</a></li>
+					<li><a href="#share">أنشر</a></li>
+				</ul>
 
-			<ul class="nav">
-				<li><a href="http://test-nota.nfshost.com/nota.py">الرئيسية</a></li>
-				<li><a href="#input">أنشئ نوتة جديدة</a></li>
-				<li><a href="#share">أنشر</a></li>
-			</ul>
-
+			</div>
 		</div>
 	</div>
-</div>
 
-</div>""" % site_url
+	</div>""" % site_url
     if img_url != None:
 	 print """<div id="header-img">
 <img class="header-img" src="%s">
