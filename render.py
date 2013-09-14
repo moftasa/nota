@@ -35,17 +35,54 @@ def head(title, url=None):
 function clearTextArea() {
 document.getElementById("textcontent").value = "";
 }
+
+function ChangeFont(font){
+document.getElementsByTagName('p')[0].style.fontFamily = font;
+document.getElementById('textcontent').style.fontFamily = font;
+}
+
+var min=8;
+var max=25;
+function zoominLetter() {
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 18;
+      }
+      if(s!=max) {
+         s += 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }
+}
+function zoomoutLetter() {
+   var p = document.getElementsByTagName('p');
+   for(i=0;i<p.length;i++) {
+      if(p[i].style.fontSize) {
+         var s = parseInt(p[i].style.fontSize.replace("px",""));
+      } else {
+         var s = 12;
+      }
+      if(s!=min) {
+         s -= 1;
+      }
+      p[i].style.fontSize = s+"px"
+   }
+}
 </script>
     """ % title
     
 def twitter_card(base_url, url, text_content):
     print """
 <meta name="twitter:card" content="summary">
-<meta name="twitter:url" content="%s%s">
+<meta name="twitter:url" content="%s">
 <meta name="twitter:title" content="%s">
 <meta name="twitter:description" content="%s">
 <meta name="twitter:image" content="http://nota.cc/static/icon.png">
-""" % (base_url, url, text_content[0:93], text_content[93:294]) #twitter cards need absolute url to icon
+<meta name="twitter:site" content="@nota_cc">
+""" % (url, text_content[0:93], text_content[93:294]) #twitter cards need absolute url to icon
 
 def close_head():
     print "</head>"
@@ -56,22 +93,32 @@ def body(text, url, base_url):
     site_url = base_url + "/nota.py"
     print """
 	<body>
-	<div class="navbar">
-		<div class="navbar-inner">
 
-			<div class="container">
+<div class="navbar">
+	<div class="navbar-inner"> 
 
-				<a href="#" class="brand" title="العودة لأعلى الصفحة">نوتة</a>
+	<!--	<div class="container"> -->
 
-				<ul class="nav">
-					<li><a href="%s">الرئيسية</a></li>
-					<li><a href="#input">أنشئ نوتة جديدة</a></li>
-					<li><a href="#share">أنشر</a></li>
+			<a href="#" class="brand" title="العودة لأعلى الصفحة">نوتة</a>
+
+			<ul class="nav">
+				<li><a href="%s">الرئيسية</a></li>
+				<li><a href="#input">أنشئ نوتة جديدة</a></li>
+				<li><a href="#share">أنشر</a></li>
+				<li><a href="#">تغير الخط</a>
+				<ul>
+					<li><a href="javascript:zoominLetter();">خط أكبر</a></li>
+					<li><a href="javascript:zoomoutLetter();">خط أصغر</a></li>
+					<li><a href="javascript:ChangeFont('Amiri');">أميري</a></li>
+					<li><a href="javascript:ChangeFont('Uthman');">عثمان</a></li>
+					<li><a href="javascript:ChangeFont('Droid Arabic Naskh');">درويد نسخ</a></li>
 				</ul>
+				</li>
+			</ul>
 
-			</div>
-		</div>
-	</div>""" % site_url
+		<!--</div>-->
+	</div>
+</div>""" % site_url
     if img_url != None:
 	 print """<div id="header-img">
 <img class="header-img" src="%s">
