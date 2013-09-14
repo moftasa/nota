@@ -75,7 +75,7 @@ def body(text, url, base_url):
     if img_url != None:
 	 print """<div id="header-img">
 <img class="header-img" src="%s">
-</div><div class="main with-image"><div id="text-margin">""" % img_url
+</div><div class="with-image"><div id="text-margin">""" % img_url
     else:
 	print '<div class="main"><div id="text-margin">' 
     print "<p>%s</p>" % text.replace('\n', '<br />') # convert line breaks
