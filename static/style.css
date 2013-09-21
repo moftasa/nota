@@ -53,6 +53,7 @@ font-size: 14px;
 padding-top: 0px;
 padding-left: 15px;
 padding-right: 15px;
+padding-bottom: 10px;
 text-decoration: none;
 color: white;
 }
@@ -86,10 +87,9 @@ margin: 0 14px;
 
 .nav ul{
 	position: absolute;
-	right: 500px;
-	top: 0;
+	right: 400px;
+	top: 42px;
  	display: none;
-
  }
 
 .nav ul li a {
@@ -98,8 +98,8 @@ margin: 0 14px;
 	color: #fff;
 	background: #424242;
 	padding: 7px;
-	border: 1px solid #fff;
- 	border-bottom: 0;
+	border: 1px solid #777;
+ 	border-top: 0;
 	width:100px;
  }
 

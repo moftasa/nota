@@ -103,9 +103,9 @@ def body(text, url, base_url):
 
 			<ul class="nav">
 				<li><a href="%s" accesskey="1">الرئيسية</a></li>
-				<li><a href="#input">أنشئ نوتة جديدة</a></li>
-				<li><a href="#share" accesskey="p">أنشر</a></li>
-				<li><a href="#">تغير الخط</a>
+				<li><a href="#input">انشئ نوتة جديدة</a></li>
+				<li><a href="#share" accesskey="p">انشر</a></li>
+				<li><a href="#">الخط</a>
 				<ul>
 					<li><a href="javascript:zoominLetter();">خط أكبر</a></li>
 					<li><a href="javascript:zoomoutLetter();">خط أصغر</a></li>
@@ -133,7 +133,7 @@ def sharing(text, url, base_url, filename):
         print "<h3><a href='%s' class='social-link'>تنزيل النص</a></h3>" % (base_url + "/raw/" + filename)
     else:
         pass
-    print "<h3><a name='share'>أنشر</a></h3>"    
+    print "<h3><a name='share'>انشر</a></h3>"    
     print """
 <a href="https://twitter.com/home/?status=%s+%s" title="غرّد" class="social-link"><img src="static/twitter.png" alt="غرد" /></a>
 """ % (urlsafe_encode(text[0:93]),  urlsafe_encode(url)) 
@@ -147,13 +147,13 @@ def sharing(text, url, base_url, filename):
     
 def form(default_text,base_url):
     url = base_url + "/nota.py"
-    print "<h2><a name='input' id='create'>أنشئ نوتة جديدة</a></h2>"
+    print "<h2><a name='input' id='create'>انشئ نوتة جديدة</a></h2>"
     print '<form name="textform" action="%s" method="post">' % url
     print '<textarea id="textcontent" name="textcontent" class="form-textarea" cols="40" rows="10" accesskey="n">'
     print default_text.rstrip()
     print '</textarea><br />'
-    print '<input id="edit-submit" type="submit" value="أحفظ" accesskey="s" />'
-    print '''<input type='button' id='edit-clear' value='أمسح رقعة الكتابة' onclick="clearTextArea()" accesskey="c">'''
+    print '<input id="edit-submit" type="submit" value="احفظ" accesskey="s" />'
+    print '''<input type='button' id='edit-clear' value='امسح رقعة الكتابة' onclick="clearTextArea()" accesskey="c">'''
     print '</form>'
 
 def tail():
