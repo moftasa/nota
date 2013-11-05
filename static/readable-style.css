@@ -1,0 +1,353 @@
+/**
+ * @style.css
+ * Styles for Simple Clean Theme.
+ */
+
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabicnaskh.css);
+@import url(http://fonts.googleapis.com/earlyaccess/amiri.css);
+
+@font-face {
+    font-family: 'Uthman';
+    src: url('uthmantn10-webfont.eot');
+    src: url('uthmantn10-webfont.eot?#iefix') format('embedded-opentype'),
+         url('uthmantn10-webfont.woff') format('woff'),
+         url('uthmantn10-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  background-color: #FFFFFF;
+  color: #242021;
+  font-family: 'Droid Arabic Naskh', Georgia, "Adobe Garamond Pro", "Apple Garamond", "ITC Garamond", "Times New Roman", Times, serif;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0px 0 0px 0;
+  text-rendering: optimizeLegibility;
+  text-align: justify;
+}
+
+
+/** Navbar **/
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+color: #424242;
+height: 60px;
+background: #424242;
+/* Adds shadow to the bottom of the bar */
+-webkit-box-shadow: 0px 0px 8px 0px #000000;
+-moz-box-shadow: 0px 0px 8px 0px #000000;
+box-shadow: 0px 0px 8px 0px #000000;
+z-index:4;
+}
+
+.navbar-inner {
+max-width: 1024px;
+margin: auto;
+}
+
+.nav a {
+font-size: 14px;
+padding-top: 0px;
+padding-left: 15px;
+padding-right: 15px;
+padding-bottom: 10px;
+text-decoration: none;
+color: white;
+}
+
+.navbar ul {
+list-style: none;
+
+}
+
+.brand{
+font-size: 30px;
+font-weight:  bold;
+float: right;
+margin: 0px 40px 40px 40px ;
+color: white;
+text-decoration:  none;
+}
+
+.navbar ul li a {
+float: right;
+margin: 0 14px;
+}
+
+/**
+*Navbar dropdown 
+*/
+
+.nav li {
+	position: relative;
+}
+
+.nav ul{
+	position: absolute;
+	right: 400px;
+	top: 40px;
+ 	display: none;
+ }
+
+.nav ul li a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	background: #424242;
+	padding: 7px;
+	border: 1px solid #777;
+ 	border-top: 0;
+	width:100px;
+ }
+
+.nav li:hover ul { display: block; }
+
+/**
+* Header
+*/
+
+#header{
+  position:relative;
+  background-color: #424242;
+  height:2.75em;
+  padding: 0px;
+  margin-top: 0px;
+  z-index:2;
+}
+a.header {
+  text-decoration:  none;
+  color: #FFFFFF;
+}
+h1.header {
+  font-size: 1.75em;
+  color: #FFFFFF;
+  margin-right: 10%;
+  padding-top: 10px;
+  margin-top: 0px;
+}
+
+#headerlinks li { 
+  display: inline-block; 
+  margin-top:0px;
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-bottom:0px;
+  height:2.75em;
+ }
+
+li.header {
+color: #FFFFFF;
+  margin-right: 10%;
+  padding: 10px;
+  margin-top: 0px;
+}
+
+li.input {
+  float: left;
+}
+
+li.input {
+ margin-right: 20px;
+ padding-top: 0px;
+ margin-top:0px;
+}
+
+a.input {
+  height: 0.1em;
+  color: #FFFFFF;
+  padding-top:10px;
+  text-decoration:none;
+} 
+a.input:hover{
+  color:#B2FC3A
+}
+
+.header-img {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top:-10%;
+    z-index:1;
+}
+
+/**
+ * Main content
+ */
+
+.main {
+padding-top: 40px;
+}
+
+#text-margin{
+  margin: auto;
+  max-width: 768px;
+  padding: 10px
+}
+
+.with-image{
+  width:100%;
+  position: absolute;
+  margin-top:33%;
+  background-color:#FFFFFF;
+  z-index:3;
+}
+
+#content{
+  width:100%;
+  position: absolute;
+  background-color:#FFFFFF;
+  z-index:3;
+}
+
+
+/**
+Sharing
+*/
+
+#sharing{
+
+  background-color: #EEEEEE;
+  color: #242021;
+  border: 0;
+  padding: 5%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+a.social-link {
+    text-decoration:none;
+    margin-left: 20px;
+}
+
+
+/**
+* Form
+*/
+
+.form-textarea {
+  background-color: #EEEEEE;
+  border: 0;
+  font-family: 'Droid Arabic Naskh';
+  font-size: 18px;
+  line-height: 30px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#edit-submit {
+  background-color: #B2FC3A;
+  border: 0;
+  color: #242021;  
+  cursor: pointer;
+  height: 44px;
+  line-height: 24px;
+  font-family: "Droid Arabic Naskh", Georgia, "Adobe Garamond Pro", "Apple Garamond", "ITC Garamond", "Times New Roman", Times, serif;
+  font-size: 20px;
+  margin: 20px 20px 0 0;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform : capitalize;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#edit-submit:hover {
+  background-color: #FFCA1B;
+}
+
+#edit-clear {
+  background-color: #CCCCCC;
+  border: 0;
+  color: #242021;  
+  cursor: pointer;
+  height: 44px;
+  line-height: 24px;
+  font-family: "Droid Arabic Naskh", Georgia, "Adobe Garamond Pro", "Apple Garamond", "ITC Garamond", "Times New Roman", Times, serif;
+  font-size: 20px;
+  margin: 20px 20px 0 0;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform : capitalize;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#edit-clear:hover {
+  background-color: #787878;
+}
+
+#content-with-image .form-textarea {
+  background-color: #EEEEEE;
+  border: 0;
+  font-family: 'Droid Arabic Naskh';
+  font-size: 18px;
+  line-height: 30px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#content-with-image #edit-submit {
+  background-color: #B2FC3A;
+  border: 0;
+  color: #242021;  
+  cursor: pointer;
+  height: 44px;
+  line-height: 24px;
+  font-family: "Droid Arabic Naskh", Georgia, "Adobe Garamond Pro", "Apple Garamond", "ITC Garamond", "Times New Roman", Times, serif;
+  font-size: 20px;
+  margin: 20px 20px 0 0;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform : capitalize;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#content-with-image #edit-submit:hover {
+  background-color: #FFCA1B;
+}
+
+#content-with-image #edit-clear {
+  background-color: #CCCCCC;
+  border: 0;
+  color: #242021;  
+  cursor: pointer;
+  height: 44px;
+  line-height: 24px;
+  font-family: "Droid Arabic Naskh", Georgia, "Adobe Garamond Pro", "Apple Garamond", "ITC Garamond", "Times New Roman", Times, serif;
+  font-size: 20px;
+  margin: 20px 20px 0 0;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform : capitalize;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#content-with-image #edit-clear:hover {
+  background-color: #787878;
+}
+
+#create {
+  text-decoration: none;
+  color: #242021;
+}
+
+
