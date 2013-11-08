@@ -45,7 +45,7 @@ def note_page_POST():
     #Input via POST
     text_content = form.getvalue('textcontent')
     text_content = text_content.decode("utf-8")
-    text_content = text_content.rstrip()
+    text_content = text_content.strip() #remove leading and trailing whitespace
    
     filename = filestore.write(text_content) # write data to disk
    
