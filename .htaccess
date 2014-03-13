@@ -5,3 +5,10 @@ RewriteEngine On
 
 RewriteRule ^(.{5})$ /nota.py?note=$1 [L]
 RewriteRule ^(.{32})$ /nota.py?note=$1 [L]
+
+# Caching 
+# 480 weeks
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+Header set Cache-Control "max-age=290304000, public"
+</FilesMatch>
+
