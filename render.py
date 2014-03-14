@@ -167,7 +167,6 @@ def form(default_text,base_url):
     print "<h2><a name='input' id='create'>أنشئ نوتة جديدة</a></h2>"
     print '<form name="textform" action="%s" method="post">' % url
     print '<textarea id="textcontent" name="textcontent" class="form-textarea" cols="40" rows="10" accesskey="n">'
-    print default_text.rstrip()
     print '</textarea><br />'
     print '<input id="edit-submit" type="submit" value="احفظ" accesskey="s" />'
     print '''<input type='button' id='edit-clear' value='امسح رقعة الكتابة' onclick="clearTextArea()" accesskey="c">'''

@@ -24,8 +24,8 @@ def md5_hash(text):
      return hashlib.md5(text).hexdigest()
     
 def write(text):
-    #filename = random_characters(5)
-    filename = md5_hash(text)
+    filename = random_characters(5)
+    #filename = md5_hash(text)
     if os.path.isfile(path + filename):
         #write(text)
 	pass
