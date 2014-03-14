@@ -29,7 +29,18 @@ def head(title, url=None):
 <title> نوتة | %s </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon" />
-<link rel="stylesheet" type="text/css" href="static/style.css" />
+<link rel="stylesheet" type="text/css" href="static/style.css" title="main" />
+<link rel="alternate stylesheet" type="text/css" href="static/dark.css" title="alt1" />
+
+<script type="text/javascript">
+ function changeStyle(title) {
+var lnks = document.getElementsByTagName('link');
+for (var i = lnks.length - 1; i >= 0; i--) {
+if (lnks[i].getAttribute('rel').indexOf('style')> -1 && lnks[i].getAttribute('title')) {
+lnks[i].disabled = true;
+if (lnks[i].getAttribute('title') == title) lnks[i].disabled = false;
+}}} 
+</script>
 
 <script language="JavaScript" type="text/javascript">
 function clearTextArea() {
@@ -113,6 +124,7 @@ def body(text, url, base_url):
 					<li><a href="javascript:ChangeFont('Uthman');">عثمان</a></li>
 					<li><a href="javascript:ChangeFont('Droid Arabic Naskh');">درويد نسخ</a></li>
 				</ul>
+				<li><span onclick="changeStyle('alt1')">غامق</span></li>
 				</li>
 			</ul>
 
