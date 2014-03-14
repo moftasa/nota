@@ -127,8 +127,8 @@ def body(text, url, base_url):
 				</li>
 				<li><a href="#">الإضاءة</a>
 				<ul>
-					<li><a href="javascript:changeStyle('alt1')">داكنة</span></li>
-					<li><a href="javascript:changeStyle('main')">فاتحة</span></li>
+					<li><a href="javascript:changeStyle('alt1')">داكنة</span></a></li>
+					<li><a href="javascript:changeStyle('main')">فاتحة</span></a></li>
 				</ul>
 				</li>
 			</ul>
