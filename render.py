@@ -124,7 +124,12 @@ def body(text, url, base_url):
 					<li><a href="javascript:ChangeFont('Uthman');">عثمان</a></li>
 					<li><a href="javascript:ChangeFont('Droid Arabic Naskh');">درويد نسخ</a></li>
 				</ul>
-				<li><span onclick="changeStyle('alt1')">غامق</span></li>
+				</li>
+				<li><a href="#">الإضاءة</a>
+				<ul>
+					<li><a href="javascript:changeStyle('alt1')">داكنة</span></li>
+					<li><a href="javascript:changeStyle('main')">فاتحة</span></li>
+				</ul>
 				</li>
 			</ul>
 
