@@ -8,6 +8,7 @@ import random
 import os
 import codecs
 import hashlib
+import time
 
 path = 'raw/'
 
@@ -20,7 +21,7 @@ def random_characters(n):
 
 def md5_hash(text):
      '''create md5 hex digest from text'''
-
+     text = text.encode('utf-8')
      return hashlib.md5(text).hexdigest()
     
 def write(text):
@@ -40,6 +41,9 @@ def read(filename):
         file = codecs.open(path + filename, "r", "utf8")
         text = file.read()
         file.close()
+        # get mtime
+        date = time.ctime(os.path.getmtime(path + filename))
+        return text, date
     except:
-        text = "404 - الصفحة غير موجودة "
-    return text
+        pass
+        #    text = "404 - الصفحة غير موجودة "

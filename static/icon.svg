@@ -16,7 +16,7 @@
    id="svg2408"
    style="display:inline"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="application-text.svg">
+   sodipodi:docname="icon.svg">
   <metadata
      id="metadata56">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -38,14 +38,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1547"
-     inkscape:window-height="876"
+     inkscape:window-width="1600"
+     inkscape:window-height="806"
      id="namedview54"
      showgrid="false"
-     inkscape:zoom="3.02"
-     inkscape:cx="41.931022"
-     inkscape:cy="10.193178"
-     inkscape:window-x="53"
+     inkscape:zoom="2.28"
+     inkscape:cx="46.819569"
+     inkscape:cy="39.86584"
+     inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2408" />
@@ -329,15 +329,15 @@
   <text
      xml:space="preserve"
      style="font-size:12px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Century Schoolbook L Medium"
-     x="24.161478"
-     y="31.42557"
+     x="12.813157"
+     y="34.661312"
      id="text3035"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3037"
-       x="24.161478"
-       y="31.42557"
-       style="font-size:18px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#4d4d4d;fill-opacity:1;font-family:Droid Arabic Naskh;-inkscape-font-specification:Droid Arabic Naskh Bold">أ ب ت</tspan></text>
+       x="12.813157"
+       y="34.661312"
+       style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#4d4d4d;fill-opacity:1;font-family:Droid Arabic Naskh;-inkscape-font-specification:Droid Arabic Naskh Bold">نوتـــــــــــة</tspan></text>
   <text
      xml:space="preserve"
      style="font-size:4.80642986px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Century Schoolbook L;-inkscape-font-specification:Century Schoolbook L Medium"
